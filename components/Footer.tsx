@@ -37,7 +37,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-slate-300">
+    <footer className="bg-[#0f1419] border-t border-white/5 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
@@ -47,28 +47,28 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-900/50">
+                <span className="text-white font-bold text-xl font-mono">C</span>
               </div>
-              <span className="text-xl font-bold text-white">Craftic</span>
+              <span className="text-xl font-bold text-white font-[Space_Grotesk]">Craftic</span>
             </div>
-            <p className="text-sm mb-4">
+            <p className="text-sm mb-4 text-slate-400 leading-relaxed">
               Building innovative software solutions that transform businesses
               and drive digital success.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm">
-                <HiMail className="text-blue-400" />
-                <span>info@craftic.com</span>
+                <HiMail className="text-cyan-400" />
+                <span className="text-slate-400">info@craftic.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
-                <HiPhone className="text-blue-400" />
-                <span>+1 (555) 123-4567</span>
+                <HiPhone className="text-cyan-400" />
+                <span className="text-slate-400">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
-                <HiLocationMarker className="text-blue-400" />
-                <span>San Francisco, CA</span>
+                <HiLocationMarker className="text-cyan-400" />
+                <span className="text-slate-400">San Francisco, CA</span>
               </div>
             </div>
           </motion.div>
@@ -80,7 +80,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="text-white font-semibold text-lg mb-4">
+            <h3 className="text-white font-semibold text-lg mb-4 font-[Space_Grotesk]">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -88,7 +88,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-blue-400 transition-colors duration-200"
+                    className="text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -104,13 +104,13 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="text-white font-semibold text-lg mb-4">Services</h3>
+            <h3 className="text-white font-semibold text-lg mb-4 font-[Space_Grotesk]">Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-sm hover:text-blue-400 transition-colors duration-200"
+                    className="text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {service.name}
                   </Link>
@@ -126,19 +126,19 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h3 className="text-white font-semibold text-lg mb-4">
+            <h3 className="text-white font-semibold text-lg mb-4 font-[Space_Grotesk]">
               Stay Updated
             </h3>
-            <p className="text-sm mb-4">
+            <p className="text-sm mb-4 text-slate-400 leading-relaxed">
               Subscribe to our newsletter for the latest updates and insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-blue-500 text-sm"
+                className="flex-1 px-4 py-2 bg-[#1a1f2e] border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 text-sm text-white placeholder-slate-500"
               />
-              <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium">
+              <button className="px-4 py-2 gradient-bg text-white rounded-lg hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-200 text-sm font-semibold">
                 Subscribe
               </button>
             </div>
@@ -151,10 +151,10 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="border-t border-slate-800 pt-8"
+          className="border-t border-white/5 pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm">
+            <p className="text-sm text-slate-400">
               © {new Date().getFullYear()} Craftic. All rights reserved.
             </p>
             <div className="flex space-x-4">
@@ -165,7 +165,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 transition-all duration-300"
+                  className="w-10 h-10 bg-[#1a1f2e] border border-white/5 rounded-lg flex items-center justify-center hover:border-cyan-400 hover:bg-gradient-to-br hover:from-blue-700 hover:to-cyan-600 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
