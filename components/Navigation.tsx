@@ -30,7 +30,7 @@ const Navigation = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'glass shadow-xl shadow-blue-900/10'
+          ? 'glass shadow-xl shadow-blue-900/10 backdrop-blur-2xl'
           : 'bg-transparent'
       }`}
     >
@@ -102,7 +102,7 @@ const Navigation = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden glass border-t border-white/5"
+          className="md:hidden glass border-t border-white/5 backdrop-blur-2xl"
         >
           <div className="px-4 py-4 space-y-3">
             {navItems.map((item) => (
