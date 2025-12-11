@@ -15,7 +15,7 @@ const BlogPage = () => {
       date: 'Nov 15, 2024',
       readTime: '5 min read',
       category: 'Web Development',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-emerald-500',
     },
     {
       title: 'Building Scalable Microservices Architecture',

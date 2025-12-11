@@ -48,7 +48,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-900/50">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-900/50">
                 <span className="text-white font-bold text-xl font-mono">C</span>
               </div>
               <span className="text-xl font-bold text-white font-[Space_Grotesk]">Craftic</span>
@@ -59,15 +59,15 @@ const Footer = () => {
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm">
-                <HiMail className="text-cyan-400" />
+                <HiMail className="text-emerald-400" />
                 <span className="text-slate-400">info@craftic.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
-                <HiPhone className="text-cyan-400" />
+                <HiPhone className="text-emerald-400" />
                 <span className="text-slate-400">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
-                <HiLocationMarker className="text-cyan-400" />
+                <HiLocationMarker className="text-emerald-400" />
                 <span className="text-slate-400">San Francisco, CA</span>
               </div>
             </div>
@@ -88,7 +88,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-200"
+                    className="text-sm text-slate-400 hover:text-emerald-400 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -110,7 +110,7 @@ const Footer = () => {
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-200"
+                    className="text-sm text-slate-400 hover:text-emerald-400 transition-colors duration-200"
                   >
                     {service.name}
                   </Link>
@@ -136,9 +136,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-4 py-2 bg-[#1a1f2e] border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 text-sm text-white placeholder-slate-500"
+                className="flex-1 px-4 py-2 bg-[#1a1f2e] border border-white/10 rounded-lg focus:outline-none focus:border-emerald-400 text-sm text-white placeholder-slate-500"
               />
-              <button className="px-4 py-2 gradient-bg text-white rounded-lg hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-200 text-sm font-semibold">
+              <button className="cta-button px-4 py-2 text-white rounded-lg text-sm font-semibold">
                 Subscribe
               </button>
             </div>
@@ -165,7 +165,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 bg-[#1a1f2e] border border-white/5 rounded-lg flex items-center justify-center hover:border-cyan-400 hover:bg-gradient-to-br hover:from-blue-700 hover:to-cyan-600 transition-all duration-300"
+                  className="w-10 h-10 bg-[#1a1f2e] border border-white/5 rounded-lg flex items-center justify-center hover:border-emerald-400 hover:bg-gradient-to-br hover:from-blue-700 hover:to-emerald-600 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}

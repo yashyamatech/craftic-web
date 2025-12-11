@@ -43,7 +43,7 @@ const Navigation = () => {
             transition={{ duration: 0.5 }}
           >
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-900/50">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-900/50">
                 <span className="text-white font-bold text-xl font-mono">C</span>
               </div>
               <span className="text-xl md:text-2xl font-bold gradient-text font-[Space_Grotesk]">
@@ -63,7 +63,7 @@ const Navigation = () => {
               >
                 <Link
                   href={item.href}
-                  className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium text-sm tracking-wide"
+                  className="text-slate-300 hover:text-emerald-400 transition-colors duration-200 font-medium text-sm tracking-wide"
                 >
                   {item.name}
                 </Link>
@@ -80,7 +80,7 @@ const Navigation = () => {
           >
             <Link
               href="/contact"
-              className="px-6 py-2.5 gradient-bg text-white rounded-lg hover:shadow-lg hover:shadow-blue-900/50 hover:scale-105 transition-all duration-200 font-semibold text-sm"
+              className="cta-button px-6 py-2.5 text-white rounded-lg font-semibold text-sm inline-block"
             >
               Get Started
             </Link>
@@ -89,7 +89,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-slate-300 hover:text-cyan-400 transition-colors"
+            className="md:hidden text-slate-300 hover:text-emerald-400 transition-colors"
           >
             {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
           </button>
@@ -109,7 +109,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-slate-300 hover:text-cyan-400 transition-colors font-medium"
+                className="block py-2 text-slate-300 hover:text-emerald-400 transition-colors font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -117,7 +117,7 @@ const Navigation = () => {
             ))}
             <Link
               href="/contact"
-              className="block w-full px-6 py-2.5 gradient-bg text-white rounded-lg text-center font-semibold"
+              className="cta-button block w-full px-6 py-2.5 text-white rounded-lg text-center font-semibold"
               onClick={() => setIsOpen(false)}
             >
               Get Started

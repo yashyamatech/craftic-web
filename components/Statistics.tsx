@@ -24,28 +24,28 @@ const Statistics = () => {
       value: 250,
       suffix: '+',
       label: 'Happy Clients',
-      color: 'from-blue-700 to-cyan-600',
+      color: 'from-blue-700 to-emerald-600',
     },
     {
       icon: HiLightningBolt,
       value: 500,
       suffix: '+',
       label: 'Projects Completed',
-      color: 'from-cyan-600 to-emerald-600',
+      color: 'from-emerald-600 to-blue-600',
     },
     {
       icon: HiTrendingUp,
       value: 98,
       suffix: '%',
       label: 'Success Rate',
-      color: 'from-emerald-600 to-blue-700',
+      color: 'from-blue-600 to-emerald-500',
     },
     {
       icon: HiGlobe,
       value: 30,
       suffix: '+',
       label: 'Countries Served',
-      color: 'from-blue-600 to-cyan-500',
+      color: 'from-emerald-500 to-blue-700',
     },
   ];
 
@@ -140,13 +140,18 @@ const StatCard = ({
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="relative group"
     >
-      <div className="bg-[#1a1f2e] border border-white/5 rounded-2xl p-8 hover:shadow-2xl hover:shadow-blue-900/20 hover:border-cyan-400/50 transition-all duration-300">
+      <div className="card-3d bg-[#1a1f2e] border border-white/5 rounded-2xl p-8 hover:shadow-refined-lg hover:border-emerald-400/50 transition-all duration-300 overflow-hidden backdrop-minimal">
+        {/* Shimmer overlay */}
+        <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
         <div className="relative z-10">
-          <div
-            className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+          <motion.div
+            className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mb-6 shadow-refined`}
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <stat.icon className="text-white" size={32} />
-          </div>
+          </motion.div>
 
           <div className="text-5xl font-bold mb-2 font-mono">
             <span className="gradient-text">

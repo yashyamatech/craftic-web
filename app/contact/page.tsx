@@ -60,7 +60,7 @@ const ContactPage = () => {
       content: 'info@craftic.com',
       subContent: 'support@craftic.com',
       link: 'mailto:info@craftic.com',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-emerald-500',
     },
     {
       icon: HiPhone,

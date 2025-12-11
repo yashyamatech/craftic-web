@@ -12,7 +12,7 @@ const ProjectsPage = () => {
         'A full-featured e-commerce platform with advanced shopping cart, payment integration, and admin dashboard.',
       image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop',
       tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
-      color: 'from-blue-700 to-cyan-600',
+      color: 'from-blue-700 to-emerald-600',
       link: '#',
     },
     {
@@ -39,7 +39,7 @@ const ProjectsPage = () => {
         'Secure mobile banking application with real-time transactions, budgeting tools, and investment tracking.',
       image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
       tags: ['React Native', 'Node.js', 'Express', 'MongoDB'],
-      color: 'from-cyan-600 to-blue-700',
+      color: 'from-emerald-600 to-blue-700',
       link: '#',
     },
     {
@@ -98,7 +98,7 @@ const ProjectsPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="bg-[#1a1f2e] rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-900/20 hover:border-cyan-400/50 transition-all duration-300 border border-white/5">
+                <div className="bg-[#1a1f2e] rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-900/20 hover:border-emerald-400/50 transition-all duration-300 border border-white/5">
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <div
@@ -114,7 +114,7 @@ const ProjectsPage = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-end p-4">
                       <a
                         href={project.link}
-                        className="flex items-center gap-2 text-white font-semibold hover:text-cyan-400 transition-colors"
+                        className="flex items-center gap-2 text-white font-semibold hover:text-emerald-400 transition-colors"
                       >
                         View Project
                         <HiExternalLink />
@@ -124,7 +124,7 @@ const ProjectsPage = () => {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-emerald-400 transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-slate-400 mb-4 leading-relaxed">

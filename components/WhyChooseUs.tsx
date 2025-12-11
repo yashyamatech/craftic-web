@@ -17,42 +17,42 @@ const WhyChooseUs = () => {
       title: 'Fast Development',
       description:
         'Rapid development cycles with agile methodology to deliver your projects on time.',
-      color: 'from-yellow-600 to-orange-600',
+      color: 'from-blue-700 to-emerald-600',
     },
     {
       icon: HiShieldCheck,
       title: 'Secure & Reliable',
       description:
         'Enterprise-grade security measures to protect your data and ensure reliability.',
-      color: 'from-emerald-600 to-green-600',
+      color: 'from-emerald-600 to-blue-600',
     },
     {
       icon: HiUserGroup,
       title: 'Expert Team',
       description:
         'Highly skilled developers and designers with years of industry experience.',
-      color: 'from-blue-700 to-cyan-600',
+      color: 'from-blue-600 to-emerald-500',
     },
     {
       icon: HiChip,
       title: 'Latest Technology',
       description:
         'Utilizing cutting-edge technologies and frameworks for modern solutions.',
-      color: 'from-cyan-600 to-blue-600',
+      color: 'from-emerald-500 to-blue-700',
     },
     {
       icon: HiClock,
       title: '24/7 Support',
       description:
         'Round-the-clock technical support to ensure your systems run smoothly.',
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-blue-700 to-emerald-600',
     },
     {
       icon: HiSupport,
       title: 'Dedicated Service',
       description:
         'Personalized attention and customized solutions tailored to your needs.',
-      color: 'from-indigo-600 to-purple-600',
+      color: 'from-emerald-600 to-blue-600',
     },
   ];
 
@@ -85,10 +85,13 @@ const WhyChooseUs = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="bg-[#1a1f2e] border border-white/5 rounded-2xl p-8 hover:shadow-2xl hover:shadow-blue-900/20 hover:border-cyan-400/50 transition-all duration-300 h-full">
+              <div className="card-3d bg-[#1a1f2e] border border-white/5 rounded-2xl p-8 hover:shadow-refined-lg hover:border-emerald-400/50 transition-all duration-300 h-full overflow-hidden backdrop-minimal">
+                {/* Shimmer overlay */}
+                <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
                 <div className="relative z-10">
                   <motion.div
-                    className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 shadow-lg`}
+                    className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 shadow-refined`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
@@ -116,17 +119,17 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 text-center"
         >
-          <div className="inline-block gradient-bg rounded-3xl p-8 md:p-12 shadow-2xl shadow-blue-900/30">
+          <div className="inline-block gradient-bg rounded-3xl p-8 md:p-12 shadow-refined-lg">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Your Project?
             </h3>
-            <p className="text-cyan-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-emerald-100 mb-8 max-w-2xl mx-auto leading-relaxed">
               Let&apos;s work together to bring your vision to life with our
               expertise and cutting-edge technology.
             </p>
             <motion.a
               href="/contact"
-              className="inline-block px-8 py-4 bg-white text-blue-700 rounded-xl font-semibold hover:shadow-xl transition-all duration-300"
+              className="inline-block px-8 py-4 bg-white text-blue-700 rounded-xl font-semibold hover:shadow-refined transition-all duration-300 hover:scale-105"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

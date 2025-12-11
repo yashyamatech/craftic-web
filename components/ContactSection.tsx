@@ -35,21 +35,21 @@ const ContactSection = () => {
       title: 'Email Us',
       content: 'info@craftic.com',
       link: 'mailto:info@craftic.com',
-      color: 'from-blue-700 to-cyan-600',
+      color: 'from-blue-700 to-emerald-600',
     },
     {
       icon: HiPhone,
       title: 'Call Us',
       content: '+1 (555) 123-4567',
       link: 'tel:+15551234567',
-      color: 'from-cyan-600 to-emerald-600',
+      color: 'from-emerald-600 to-blue-600',
     },
     {
       icon: HiLocationMarker,
       title: 'Visit Us',
       content: 'San Francisco, CA',
       link: '#',
-      color: 'from-emerald-600 to-green-600',
+      color: 'from-blue-600 to-emerald-500',
     },
   ];
 
@@ -83,7 +83,7 @@ const ContactSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-[#1a1f2e] rounded-2xl p-6 hover:shadow-2xl hover:shadow-blue-900/20 hover:border-cyan-400/50 transition-all duration-300 border border-white/5 text-center">
+              <div className="bg-[#1a1f2e] rounded-2xl p-6 hover:shadow-2xl hover:shadow-blue-900/20 hover:border-emerald-400/50 transition-all duration-300 border border-white/5 text-center">
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${info.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                 >
@@ -126,7 +126,7 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-[#0f1419] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all text-white placeholder-slate-500"
+                  className="w-full px-4 py-3 bg-[#0f1419] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition-all text-white placeholder-slate-500"
                   placeholder="John Doe"
                 />
               </div>
@@ -144,7 +144,7 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-[#0f1419] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all text-white placeholder-slate-500"
+                  className="w-full px-4 py-3 bg-[#0f1419] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition-all text-white placeholder-slate-500"
                   placeholder="john@example.com"
                 />
               </div>
@@ -164,7 +164,7 @@ const ContactSection = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-[#0f1419] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all text-white placeholder-slate-500"
+                className="w-full px-4 py-3 bg-[#0f1419] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition-all text-white placeholder-slate-500"
                 placeholder="Project Inquiry"
               />
             </div>
@@ -183,7 +183,7 @@ const ContactSection = () => {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-4 py-3 bg-[#0f1419] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all resize-none text-white placeholder-slate-500"
+                className="w-full px-4 py-3 bg-[#0f1419] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition-all resize-none text-white placeholder-slate-500"
                 placeholder="Tell us about your project..."
               />
             </div>

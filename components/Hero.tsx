@@ -12,6 +12,14 @@ const Hero = () => {
     { Icon: HiChip, delay: 0.6, top: '75%', right: '15%' },
   ];
 
+  // 3D geometric shapes for minimal futuristic design
+  const geometricShapes = [
+    { size: 60, delay: 0, top: '20%', left: '5%', rotation: 45 },
+    { size: 40, delay: 0.3, top: '60%', left: '8%', rotation: 30 },
+    { size: 50, delay: 0.6, top: '30%', right: '5%', rotation: 60 },
+    { size: 35, delay: 0.9, top: '70%', right: '10%', rotation: 15 },
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a0e1a] via-[#0f1419] to-[#1a1f2e]">
       {/* Animated Background Elements */}
@@ -19,11 +27,45 @@ const Hero = () => {
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e40af15_1px,transparent_1px),linear-gradient(to_bottom,#1e40af15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
+        {/* 3D Floating Geometric Shapes - Minimal Futuristic */}
+        {geometricShapes.map((shape, index) => (
+          <motion.div
+            key={`shape-${index}`}
+            className="absolute"
+            style={{
+              width: shape.size,
+              height: shape.size,
+              top: shape.top,
+              left: shape.left,
+              right: shape.right,
+            }}
+            animate={{
+              y: [0, -40, 0],
+              rotate: [shape.rotation, shape.rotation + 180, shape.rotation + 360],
+              opacity: [0.1, 0.3, 0.1],
+            }}
+            transition={{
+              duration: 10 + index * 2,
+              repeat: Infinity,
+              delay: shape.delay,
+              ease: "easeInOut",
+            }}
+          >
+            <div
+              className="w-full h-full bg-gradient-to-br from-blue-700/20 to-emerald-600/20 border border-emerald-500/20 backdrop-blur-sm"
+              style={{
+                transform: 'rotateX(45deg) rotateZ(45deg)',
+                transformStyle: 'preserve-3d',
+              }}
+            />
+          </motion.div>
+        ))}
+
         {/* Floating Icons */}
         {floatingIcons.map((item, index) => (
           <motion.div
             key={index}
-            className="absolute text-cyan-500/10"
+            className="absolute text-emerald-500/10"
             style={{
               top: item.top,
               left: item.left,
@@ -44,9 +86,29 @@ const Hero = () => {
           </motion.div>
         ))}
 
-        {/* Gradient Orbs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-700/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl" />
+        {/* Gradient Orbs with Pulse Effect */}
+        <motion.div
+          className="absolute top-20 left-10 w-96 h-96 bg-blue-700/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.3, 0.2],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.3, 0.2, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+          }}
+        />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -58,7 +120,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-700/30 to-cyan-600/30 border border-cyan-500/30 text-cyan-400 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-700/30 to-emerald-600/30 border border-emerald-500/30 text-emerald-400 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm shimmer">
                 Welcome to Craftic
               </span>
             </motion.div>
@@ -91,20 +153,20 @@ const Hero = () => {
             >
               <Link
                 href="/contact"
-                className="group px-8 py-4 gradient-bg text-white rounded-xl hover:shadow-xl hover:shadow-blue-900/50 hover:scale-105 transition-all duration-300 font-semibold flex items-center justify-center"
+                className="cta-button group px-8 py-4 text-white rounded-xl font-semibold flex items-center justify-center"
               >
                 Get Started
                 <HiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/projects"
-                className="px-8 py-4 bg-[#1a1f2e] border border-white/10 text-slate-300 rounded-xl hover:shadow-xl hover:border-cyan-400 hover:bg-[#1e2532] transition-all duration-300 font-semibold"
+                className="px-8 py-4 bg-[#1a1f2e] border border-white/10 text-slate-300 rounded-xl hover:shadow-xl hover:border-emerald-400 hover:bg-[#1e2532] transition-all duration-300 font-semibold"
               >
                 View Our Work
               </Link>
             </motion.div>
 
-            {/* Stats */}
+            {/* Stats with Enhanced Styling */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -128,7 +190,7 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right Content - Animated Illustration */}
+          {/* Right Content - 3D Animated Illustration */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -136,9 +198,9 @@ const Hero = () => {
             className="relative hidden lg:block"
           >
             <div className="relative w-full aspect-square">
-              {/* Animated circles with dark theme */}
+              {/* 3D Animated circles with emerald theme */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-blue-700/20 to-cyan-600/20 rounded-full border border-cyan-500/20"
+                className="absolute inset-0 bg-gradient-to-br from-blue-700/20 to-emerald-600/20 rounded-full border border-emerald-500/20 shadow-refined-lg"
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [0.3, 0.5, 0.3],
@@ -147,9 +209,13 @@ const Hero = () => {
                   duration: 4,
                   repeat: Infinity,
                 }}
+                style={{
+                  transform: 'rotateX(10deg)',
+                  transformStyle: 'preserve-3d',
+                }}
               />
               <motion.div
-                className="absolute inset-8 bg-gradient-to-br from-cyan-600/20 to-blue-700/20 rounded-full border border-blue-500/20"
+                className="absolute inset-8 bg-gradient-to-br from-emerald-600/20 to-blue-700/20 rounded-full border border-blue-500/20 shadow-refined"
                 animate={{
                   scale: [1.1, 1, 1.1],
                   opacity: [0.4, 0.6, 0.4],
@@ -158,9 +224,13 @@ const Hero = () => {
                   duration: 4,
                   repeat: Infinity,
                 }}
+                style={{
+                  transform: 'rotateY(10deg)',
+                  transformStyle: 'preserve-3d',
+                }}
               />
               <motion.div
-                className="absolute inset-16 bg-gradient-to-br from-blue-600/30 to-cyan-500/30 rounded-full border border-cyan-400/30"
+                className="absolute inset-16 bg-gradient-to-br from-blue-600/30 to-emerald-500/30 rounded-full border border-emerald-400/30"
                 animate={{
                   scale: [1, 1.2, 1],
                   opacity: [0.5, 0.7, 0.5],
@@ -169,17 +239,32 @@ const Hero = () => {
                   duration: 4,
                   repeat: Infinity,
                 }}
+                style={{
+                  transform: 'rotateZ(45deg)',
+                  transformStyle: 'preserve-3d',
+                }}
               />
-              {/* Center icon */}
+              {/* Center icon with 3D effect */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
-                  className="w-32 h-32 gradient-bg rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-900/50"
+                  className="w-32 h-32 gradient-bg rounded-3xl flex items-center justify-center shadow-refined-lg card-3d"
                   animate={{
-                    rotate: [0, 5, -5, 0],
+                    rotateY: [0, 360],
+                    rotateX: [0, 10, 0],
                   }}
                   transition={{
-                    duration: 6,
-                    repeat: Infinity,
+                    rotateY: {
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: "linear",
+                    },
+                    rotateX: {
+                      duration: 6,
+                      repeat: Infinity,
+                    },
+                  }}
+                  style={{
+                    transformStyle: 'preserve-3d',
                   }}
                 >
                   <HiCode className="text-white" size={64} />
