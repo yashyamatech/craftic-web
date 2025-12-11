@@ -87,7 +87,7 @@ const BlogPage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900">
+      <section className="py-20 bg-gradient-to-br from-[#0a0e1a] via-[#0f1419] to-[#1a1f2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ const BlogPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Our <span className="gradient-text">Blog</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
               Insights, tutorials, and updates from our team of experts on the
               latest in software development and technology.
             </p>
@@ -107,7 +107,7 @@ const BlogPage = () => {
       </section>
 
       {/* Categories Filter */}
-      <section className="py-8 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <section className="py-8 bg-[#0a0e1a] border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ const BlogPage = () => {
       </section>
 
       {/* Blog Grid */}
-      <section className="py-20 bg-white dark:bg-slate-950">
+      <section className="py-20 bg-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
@@ -146,7 +146,7 @@ const BlogPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group cursor-pointer"
               >
-                <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-slate-200 dark:border-slate-800 h-full flex flex-col">
+                <div className="bg-[#0f1419] rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-slate-200 dark:border-slate-800 h-full flex flex-col">
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <Image
@@ -164,7 +164,7 @@ const BlogPage = () => {
 
                   {/* Content */}
                   <div className="p-6 flex-1 flex flex-col">
-                    <div className="flex items-center gap-4 text-sm text-slate-600 dark:text-slate-400 mb-4">
+                    <div className="flex items-center gap-4 text-sm text-slate-400 mb-4">
                       <div className="flex items-center gap-1">
                         <HiUser size={16} />
                         <span>{post.author}</span>
@@ -175,11 +175,11 @@ const BlogPage = () => {
                       </div>
                     </div>
 
-                    <h2 className="text-xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h2 className="text-xl font-bold mb-3 text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {post.title}
                     </h2>
 
-                    <p className="text-slate-600 dark:text-slate-400 mb-4 flex-1">
+                    <p className="text-slate-400 mb-4 flex-1">
                       {post.excerpt}
                     </p>
 
@@ -218,7 +218,7 @@ const BlogPage = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900">
+      <section className="py-20 bg-[#0f1419]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

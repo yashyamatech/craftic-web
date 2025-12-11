@@ -120,7 +120,7 @@ const TechnologiesPage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900">
+      <section className="py-20 bg-gradient-to-br from-[#0a0e1a] via-[#0f1419] to-[#1a1f2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -131,7 +131,7 @@ const TechnologiesPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Our <span className="gradient-text">Technologies</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
               We leverage cutting-edge technologies and frameworks to build
               scalable, secure, and performant solutions.
             </p>
@@ -140,7 +140,7 @@ const TechnologiesPage = () => {
       </section>
 
       {/* Technologies Grid */}
-      <section className="py-20 bg-white dark:bg-slate-950">
+      <section className="py-20 bg-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {techCategories.map((category, catIndex) => (
@@ -167,11 +167,11 @@ const TechnologiesPage = () => {
                       whileHover={{ scale: 1.05 }}
                       className="group"
                     >
-                      <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center h-full min-h-[120px]">
+                      <div className="bg-[#0f1419] rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center h-full min-h-[120px]">
                         <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                           <HiCode className="text-white" size={28} />
                         </div>
-                        <h3 className="text-lg font-semibold text-slate-800 dark:text-white text-center">
+                        <h3 className="text-lg font-semibold text-white text-center">
                           {tech}
                         </h3>
                       </div>
@@ -185,7 +185,7 @@ const TechnologiesPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900">
+      <section className="py-20 bg-[#0f1419]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -197,7 +197,7 @@ const TechnologiesPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our <span className="gradient-text">Services</span>
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               Comprehensive technology services tailored to your business needs
             </p>
           </motion.div>
@@ -216,10 +216,10 @@ const TechnologiesPage = () => {
                   <div
                     className={`w-full h-2 bg-gradient-to-r ${service.color} rounded-full mb-6`}
                   />
-                  <h3 className="text-xl font-bold mb-3 text-slate-800 dark:text-white">
+                  <h3 className="text-xl font-bold mb-3 text-white">
                     {service.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400">
+                  <p className="text-slate-400">
                     {service.description}
                   </p>
                 </div>
@@ -230,7 +230,7 @@ const TechnologiesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white dark:bg-slate-950">
+      <section className="py-20 bg-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

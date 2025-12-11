@@ -88,7 +88,7 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900">
+      <section className="py-20 bg-gradient-to-br from-[#0a0e1a] via-[#0f1419] to-[#1a1f2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -99,7 +99,7 @@ const AboutPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               About <span className="gradient-text">Craftic</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
               We are a passionate team of innovators, designers, and developers
               dedicated to transforming ideas into exceptional digital
               experiences.
@@ -109,7 +109,7 @@ const AboutPage = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white dark:bg-slate-950">
+      <section className="py-20 bg-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -121,7 +121,7 @@ const AboutPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Our <span className="gradient-text">Story</span>
               </h2>
-              <div className="space-y-4 text-slate-600 dark:text-slate-400">
+              <div className="space-y-4 text-slate-400">
                 <p>
                   Founded in 2018, Craftic began with a simple mission: to help
                   businesses leverage technology to achieve their goals. What
@@ -163,7 +163,7 @@ const AboutPage = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900">
+      <section className="py-20 bg-[#0f1419]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -175,7 +175,7 @@ const AboutPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our <span className="gradient-text">Values</span>
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </motion.div>
@@ -196,10 +196,10 @@ const AboutPage = () => {
                   >
                     <value.icon className="text-white" size={32} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-slate-800 dark:text-white">
+                  <h3 className="text-xl font-bold mb-3 text-white">
                     {value.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400">
+                  <p className="text-slate-400">
                     {value.description}
                   </p>
                 </div>
@@ -210,7 +210,7 @@ const AboutPage = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white dark:bg-slate-950">
+      <section className="py-20 bg-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -222,7 +222,7 @@ const AboutPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Meet Our <span className="gradient-text">Team</span>
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               The talented individuals behind our success
             </p>
           </motion.div>
@@ -237,7 +237,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                <div className="bg-[#0f1419] rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800">
                   {/* Image */}
                   <div className="relative h-64 overflow-hidden">
                     <Image
@@ -250,10 +250,10 @@ const AboutPage = () => {
 
                   {/* Content */}
                   <div className="p-6 text-center">
-                    <h3 className="text-xl font-bold mb-2 text-slate-800 dark:text-white">
+                    <h3 className="text-xl font-bold mb-2 text-white">
                       {member.name}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 mb-4">
+                    <p className="text-slate-400 mb-4">
                       {member.role}
                     </p>
 
@@ -261,19 +261,19 @@ const AboutPage = () => {
                     <div className="flex justify-center space-x-3">
                       <a
                         href={member.social.linkedin}
-                        className="w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-white transition-all duration-300"
+                        className="w-10 h-10 bg-[#1a1f2e] border border-white/5 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-white transition-all duration-300"
                       >
                         <FaLinkedinIn size={18} />
                       </a>
                       <a
                         href={member.social.twitter}
-                        className="w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-white transition-all duration-300"
+                        className="w-10 h-10 bg-[#1a1f2e] border border-white/5 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-white transition-all duration-300"
                       >
                         <FaTwitter size={18} />
                       </a>
                       <a
                         href={member.social.github}
-                        className="w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-white transition-all duration-300"
+                        className="w-10 h-10 bg-[#1a1f2e] border border-white/5 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-white transition-all duration-300"
                       >
                         <FaGithub size={18} />
                       </a>

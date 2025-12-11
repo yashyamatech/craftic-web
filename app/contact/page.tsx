@@ -90,7 +90,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900">
+      <section className="py-20 bg-gradient-to-br from-[#0a0e1a] via-[#0f1419] to-[#1a1f2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,7 @@ const ContactPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Get in <span className="gradient-text">Touch</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
               Have a project in mind? We&apos;d love to hear from you. Send us a
               message and we&apos;ll respond as soon as possible.
             </p>
@@ -110,7 +110,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-12 bg-white dark:bg-slate-950">
+      <section className="py-12 bg-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contactInfo.map((info, index) => (
@@ -122,19 +122,19 @@ const ContactPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 text-center h-full">
+                <div className="bg-[#0f1419] rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 text-center h-full">
                   <div
                     className={`w-16 h-16 bg-gradient-to-br ${info.color} rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
                   >
                     <info.icon className="text-white" size={28} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-white">
+                  <h3 className="text-xl font-semibold mb-3 text-white">
                     {info.title}
                   </h3>
                   <p className="text-slate-700 dark:text-slate-300 font-medium mb-1">
                     {info.content}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                  <p className="text-sm text-slate-400">
                     {info.subContent}
                   </p>
                 </div>
@@ -145,7 +145,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900">
+      <section className="py-20 bg-[#0f1419]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Column - Info */}
@@ -158,7 +158,7 @@ const ContactPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Let&apos;s Start a <span className="gradient-text">Conversation</span>
               </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
+              <p className="text-lg text-slate-400 mb-8">
                 Whether you&apos;re looking to build a new application, modernize
                 your existing systems, or just have questions about our
                 services, we&apos;re here to help.
@@ -170,10 +170,10 @@ const ContactPage = () => {
                     <HiChat className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-800 dark:text-white mb-2">
+                    <h3 className="font-semibold text-white mb-2">
                       Quick Response
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400">
+                    <p className="text-slate-400">
                       We typically respond to inquiries within 24 hours.
                     </p>
                   </div>
@@ -184,10 +184,10 @@ const ContactPage = () => {
                     <HiShieldCheck className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-800 dark:text-white mb-2">
+                    <h3 className="font-semibold text-white mb-2">
                       Confidential
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400">
+                    <p className="text-slate-400">
                       Your information is secure and will never be shared.
                     </p>
                   </div>
@@ -196,7 +196,7 @@ const ContactPage = () => {
 
               {/* Social Links */}
               <div>
-                <h3 className="font-semibold text-slate-800 dark:text-white mb-4">
+                <h3 className="font-semibold text-white mb-4">
                   Connect with us
                 </h3>
                 <div className="flex gap-4">
@@ -207,7 +207,7 @@ const ContactPage = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className={`w-12 h-12 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center ${social.color} hover:text-white transition-all duration-300`}
+                      className={`w-12 h-12 bg-[#1a1f2e] border border-white/5 rounded-full flex items-center justify-center ${social.color} hover:text-white transition-all duration-300`}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -244,7 +244,7 @@ const ContactPage = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
+                      className="w-full px-4 py-3 bg-[#0f1419] border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
                       placeholder="John Doe"
                     />
                   </div>
@@ -262,7 +262,7 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
+                      className="w-full px-4 py-3 bg-[#0f1419] border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -282,7 +282,7 @@ const ContactPage = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
+                      className="w-full px-4 py-3 bg-[#0f1419] border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
@@ -299,7 +299,7 @@ const ContactPage = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
+                      className="w-full px-4 py-3 bg-[#0f1419] border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
                       placeholder="Your Company"
                     />
                   </div>
@@ -319,7 +319,7 @@ const ContactPage = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
+                    className="w-full px-4 py-3 bg-[#0f1419] border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
                     placeholder="How can we help you?"
                   />
                 </div>
@@ -337,7 +337,7 @@ const ContactPage = () => {
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
+                      className="w-full px-4 py-3 bg-[#0f1419] border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
                     >
                       <option value="">Select budget</option>
                       <option value="<10k">&lt; $10,000</option>
@@ -358,7 +358,7 @@ const ContactPage = () => {
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
+                      className="w-full px-4 py-3 bg-[#0f1419] border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
                     >
                       <option value="">Select timeline</option>
                       <option value="urgent">Urgent (1-2 weeks)</option>
@@ -383,7 +383,7 @@ const ContactPage = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-[#0f1419] border border-slate-300 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all resize-none"
                     placeholder="Tell us about your project..."
                   />
                 </div>
@@ -404,18 +404,18 @@ const ContactPage = () => {
       </section>
 
       {/* Map Section (Placeholder) */}
-      <section className="py-20 bg-white dark:bg-slate-950">
+      <section className="py-20 bg-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-slate-200 dark:bg-slate-800 rounded-3xl overflow-hidden h-96 flex items-center justify-center"
+            className="bg-[#1a1f2e] border border-white/5 rounded-3xl overflow-hidden h-96 flex items-center justify-center"
           >
             <div className="text-center">
               <HiLocationMarker className="mx-auto mb-4 text-slate-400" size={64} />
-              <p className="text-slate-600 dark:text-slate-400 text-lg">
+              <p className="text-slate-400 text-lg">
                 Map Integration Placeholder
               </p>
               <p className="text-slate-500 dark:text-slate-500 text-sm mt-2">
