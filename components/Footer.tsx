@@ -132,13 +132,13 @@ const Footer = () => {
             <p className="text-sm mb-4 text-slate-400 leading-relaxed">
               Subscribe to our newsletter for the latest updates and insights.
             </p>
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex flex-col gap-3">
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-4 py-2 bg-[#1a1f2e] border border-white/10 rounded-lg focus:outline-none focus:border-emerald-400 text-sm text-white placeholder-slate-500"
+                className="w-full px-4 py-2 bg-[#1a1f2e] border border-white/10 rounded-lg focus:outline-none focus:border-emerald-400 text-sm text-white placeholder-slate-500"
               />
-              <button className="cta-button px-4 py-2 text-white rounded-lg text-sm font-semibold">
+              <button className="cta-button w-full px-4 py-2 text-white rounded-lg text-sm font-semibold">
                 Subscribe
               </button>
             </div>
