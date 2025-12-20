@@ -60,15 +60,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <HiMail className="text-emerald-400" />
-                <span className="text-slate-400">info@craftic.com</span>
+                <span className="text-slate-400">crafticsolutions@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <HiPhone className="text-emerald-400" />
-                <span className="text-slate-400">+1 (555) 123-4567</span>
+                <span className="text-slate-400">+91 9737682010</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <HiLocationMarker className="text-emerald-400" />
-                <span className="text-slate-400">San Francisco, CA</span>
+                <span className="text-slate-400">Remote Worldwide</span>
               </div>
             </div>
           </motion.div>

@@ -210,7 +210,7 @@ const AboutPage = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-[#0a0e1a]">
+      {/* <section className="py-20 bg-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -237,28 +237,28 @@ const AboutPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="bg-[#0f1419] rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                <div className="bg-[#0f1419] rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800"> */}
                   {/* Image */}
-                  <div className="relative h-64 overflow-hidden">
+                  {/* <div className="relative h-64 overflow-hidden">
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-300"
                     />
-                  </div>
+                  </div> */}
 
                   {/* Content */}
-                  <div className="p-6 text-center">
+                  {/* <div className="p-6 text-center">
                     <h3 className="text-xl font-bold mb-2 text-white">
                       {member.name}
                     </h3>
                     <p className="text-slate-400 mb-4">
                       {member.role}
-                    </p>
+                    </p> */}
 
                     {/* Social Links */}
-                    <div className="flex justify-center space-x-3">
+                    {/* <div className="flex justify-center space-x-3">
                       <a
                         href={member.social.linkedin}
                         className="w-10 h-10 bg-[#1a1f2e] border border-white/5 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-white transition-all duration-300"
@@ -284,7 +284,7 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

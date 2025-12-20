@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.jsdelivr.net',
         pathname: '/gh/devicons/devicon/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**', // Allows all image paths from Unsplash
+      },
     ],
   },
 };

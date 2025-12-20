@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
@@ -22,7 +23,7 @@ const Navigation = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Technologies', href: '/technologies' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
+    // { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -43,8 +44,9 @@ const Navigation = () => {
             transition={{ duration: 0.5 }}
           >
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-900/50">
-                <span className="text-white font-bold text-xl font-mono">C</span>
+              <div className="w-10 h-10 bg-transparent to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-900/50">
+                <Image src="/assets/logoblue.png" alt="Craftic logo" width={100} height={100} />
+                  
               </div>
               <span className="text-xl md:text-2xl font-bold gradient-text font-[Space_Grotesk]">
                 Craftic

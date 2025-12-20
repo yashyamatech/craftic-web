@@ -53,32 +53,30 @@ const ContactPage = () => {
     });
   };
 
-  const contactInfo = [
+ const contactInfo = [
     {
       icon: HiMail,
       title: 'Email Us',
-      content: 'info@craftic.com',
-      subContent: 'support@craftic.com',
-      link: 'mailto:info@craftic.com',
-      color: 'from-blue-500 to-emerald-500',
+      content: 'crafticsolutions@gmail.com',
+      link: 'mailto:crafticsolutions@gmail.com',
+      color: 'from-blue-700 to-emerald-600',
     },
     {
       icon: HiPhone,
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      subContent: 'Mon-Fri, 9AM-6PM EST',
-      link: 'tel:+15551234567',
-      color: 'from-purple-500 to-pink-500',
+      content: '+91 9737682010',
+      link: 'tel:+919737682010',
+      color: 'from-emerald-600 to-blue-600',
     },
     {
       icon: HiLocationMarker,
       title: 'Visit Us',
-      content: '123 Tech Street',
-      subContent: 'San Francisco, CA 94102',
+      content: 'Remote Worldwide',
       link: '#',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-blue-600 to-emerald-500',
     },
   ];
+
 
   const socialLinks = [
     { icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook', color: 'hover:bg-blue-600' },
@@ -134,9 +132,9 @@ const ContactPage = () => {
                   <p className="text-slate-700 dark:text-slate-300 font-medium mb-1">
                     {info.content}
                   </p>
-                  <p className="text-sm text-slate-400">
+                  {/* <p className="text-sm text-slate-400">
                     {info.subContent}
-                  </p>
+                  </p> */}
                 </div>
               </motion.a>
             ))}
