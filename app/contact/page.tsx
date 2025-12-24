@@ -11,9 +11,8 @@ import {
 } from 'react-icons/hi';
 import {
   FaFacebookF,
-  FaTwitter,
   FaLinkedinIn,
-  FaGithub,
+  FaInstagram,
 } from 'react-icons/fa';
 
 const ContactPage = () => {
@@ -79,10 +78,9 @@ const ContactPage = () => {
 
 
   const socialLinks = [
-    { icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook', color: 'hover:bg-blue-600' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter', color: 'hover:bg-sky-500' },
-    { icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn', color: 'hover:bg-blue-700' },
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub', color: 'hover:bg-gray-700' },
+    { icon: FaFacebookF, href: 'https://www.facebook.com/people/Craftic-Solutions/61581248604804/', label: 'Facebook', color: 'hover:bg-blue-600' },
+    { icon: FaLinkedinIn, href: 'https://linkedin.com/in/craftic-solutions', label: 'LinkedIn', color: 'hover:bg-blue-700' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/crafticsolutions/', label: 'Instagram', color: 'hover:bg-pink-600' },
   ];
 
   return (

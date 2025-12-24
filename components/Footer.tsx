@@ -4,22 +4,16 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   FaFacebookF,
-  FaTwitter,
   FaLinkedinIn,
-  FaGithub,
   FaInstagram,
-  FaYoutube,
 } from 'react-icons/fa';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: FaYoutube, href: 'https://youtube.com', label: 'YouTube' },
+    { icon: FaFacebookF, href: 'https://www.facebook.com/people/Craftic-Solutions/61581248604804/', label: 'Facebook' },
+    { icon: FaLinkedinIn, href: 'https://linkedin.com/in/craftic-solutions', label: 'LinkedIn' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/crafticsolutions/', label: 'Instagram' },
   ];
 
   const quickLinks = [
