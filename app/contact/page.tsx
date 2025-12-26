@@ -27,9 +27,18 @@ const ContactPage = () => {
     timeline: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+
+
     alert('Thank you for your message! We will get back to you soon.');
     setFormData({
       name: '',
