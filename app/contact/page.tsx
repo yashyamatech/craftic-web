@@ -14,6 +14,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from 'react-icons/fa';
+import { sendContact } from '../../src/lib/contact';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -31,15 +32,15 @@ const ContactPage = () => {
     e.preventDefault();
     console.log('Form submitted:', formData);
 
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    try {
+      await sendContact(formData);
+      alert('Thank you for your message! We will get back to you soon.');
+    } catch {
+      alert("Failed to send message");
+    }
 
 
-
-    alert('Thank you for your message! We will get back to you soon.');
+    
     setFormData({
       name: '',
       email: '',
