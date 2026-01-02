@@ -44,13 +44,13 @@ const Navigation = () => {
             transition={{ duration: 0.5 }}
           >
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-transparent to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-900/50">
+              {/* <div className="w-10 h-10 bg-transparent items-center justify-center shadow-lg "> */}
                 <Image src="/assets/logoblue.png" alt="Craftic logo" width={100} height={100} />
                   
-              </div>
-              <span className="text-xl md:text-2xl font-bold gradient-text font-[Space_Grotesk]">
+              {/* </div> */}
+              {/* <span className="text-xl md:text-2xl font-bold gradient-text font-[Space_Grotesk]">
                 Craftic
-              </span>
+              </span> */}
             </Link>
           </motion.div>
 
