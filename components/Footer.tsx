@@ -1,33 +1,48 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
-} from 'react-icons/fa';
-import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
+  FaWhatsapp,
+} from "react-icons/fa";
+import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
+import Image from "next/image";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: FaFacebookF, href: 'https://www.facebook.com/people/Craftic-Solutions/61581248604804/', label: 'Facebook' },
-    { icon: FaLinkedinIn, href: 'https://linkedin.com/in/craftic-solutions', label: 'LinkedIn' },
-    { icon: FaInstagram, href: 'https://www.instagram.com/crafticsolutions/', label: 'Instagram' },
+    {
+      icon: FaFacebookF,
+      href: "https://www.facebook.com/people/Craftic-Solutions/61581248604804/",
+      label: "Facebook",
+    },
+    {
+      icon: FaLinkedinIn,
+      href: "https://linkedin.com/in/craftic-solutions",
+      label: "LinkedIn",
+    },
+    {
+      icon: FaInstagram,
+      href: "https://www.instagram.com/crafticsolutions/",
+      label: "Instagram",
+    },
+    { icon: FaWhatsapp, href: "https://wa.me/919033353762", label: "WhatsApp" },
   ];
 
   const quickLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Technologies', href: '/technologies' },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Technologies", href: "/technologies" },
   ];
 
   const services = [
-    { name: 'Web Development', href: '/technologies' },
-    { name: 'Mobile Apps', href: '/technologies' },
-    { name: 'Cloud Solutions', href: '/technologies' },
-    { name: 'Consulting', href: '/contact' },
+    { name: "Web Development", href: "/technologies" },
+    { name: "Mobile Apps", href: "/technologies" },
+    { name: "Cloud Solutions", href: "/technologies" },
+    { name: "Consulting", href: "/contact" },
   ];
 
   return (
@@ -42,10 +57,19 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-900/50">
+              <Link href="/" className="flex items-center space-x-3">
+                <Image
+                  src="/assets/logoblue.png"
+                  alt="Craftic logo"
+                  width={100}
+                  height={100}
+                />
+              </Link>
+
+              {/* <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-900/50">
                 <span className="text-white font-bold text-xl font-mono">C</span>
-              </div>
-              <span className="text-xl font-bold text-white font-[Space_Grotesk]">Craftic</span>
+              </div> */}
+              <span className="text-xl font-bold text-white font-[Space_Grotesk]">Craftic Solutions</span>
             </div>
             <p className="text-sm mb-4 text-slate-400 leading-relaxed">
               Building innovative software solutions that transform businesses
@@ -54,11 +78,17 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <HiMail className="text-emerald-400" />
-                <span className="text-slate-400">crafticsolutions@gmail.com</span>
+                <span className="text-slate-400">
+                  crafticsolutions@gmail.com
+                </span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <HiPhone className="text-emerald-400" />
                 <span className="text-slate-400">+91 9737682010</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+                <HiPhone className="text-emerald-400" />
+                <span className="text-slate-400">+91 9033353762</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <HiLocationMarker className="text-emerald-400" />
@@ -98,7 +128,9 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="text-white font-semibold text-lg mb-4 font-[Space_Grotesk]">Services</h3>
+            <h3 className="text-white font-semibold text-lg mb-4 font-[Space_Grotesk]">
+              Services
+            </h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>

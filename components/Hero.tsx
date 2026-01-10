@@ -174,9 +174,9 @@ const Hero = () => {
               className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto lg:mx-0"
             >
               {[
-                { value: '500+', label: 'Projects' },
-                { value: '250+', label: 'Clients' },
-                { value: '98%', label: 'Success' },
+                { value: '28+', label: 'Projects' },
+                { value: '16', label: 'Clients' },
+                { value: '95%', label: 'Success' },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <div className="text-3xl md:text-4xl font-bold gradient-text mb-1 font-mono">

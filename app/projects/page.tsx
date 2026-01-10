@@ -1,65 +1,40 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { HiExternalLink, HiCode } from 'react-icons/hi';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { HiExternalLink, HiCode } from "react-icons/hi";
 
 const ProjectsPage = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform For Retailers',
+      title: "E-Commerce Platform For Liquor Store",
       description:
-        'A full-featured e-commerce platform with advanced shopping cart, payment integration.',
-      image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop',
-      tags: ['Flutter', 'Firebase'],
-      color: 'from-blue-700 to-emerald-600',
-      link: '#',
+        "A full-featured e-commerce platform with advanced shopping cart, payment integration, and admin dashboard for managing products and orders.",
+      image: "/assets/sipx_logo.jpg",
+      tags: ["Next.js", "Supabase"],
+      color: "from-blue-700 to-emerald-600",
+      link: "https://www.sipxspirits.com",
     },
     {
-      title: 'Healthcare Management System',
+      title: "Healthcare Management System",
       description:
-        'Comprehensive healthcare management solution with patient records, appointments, and billing features.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
-      tags: ['React', 'Redis', 'PostgreSQL', 'AWS'],
-      color: 'from-emerald-600 to-green-600',
-      link: '#',
+        "Comprehensive healthcare management solution with patient records, appointments, and billing features.",
+      image:
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+      tags: ["React", "Redis", "PostgreSQL", "AWS"],
+      color: "from-emerald-600 to-green-600",
+      link: "#",
     },
     {
-      title: 'Spendid',
+      title: "Spendid",
       description:
-        'Modern Expense Tracker App with real-time analytics, budgeting tools, and multi-currency support.',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
-      tags: ['Flutter', 'Firebase'],
-      color: 'from-purple-600 to-pink-600',
-      link: '#',
+        "Modern Expense Tracker App with real-time analytics, budgeting tools, and multi-currency support.",
+      image:
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+      tags: ["Flutter", "Firebase"],
+      color: "from-purple-600 to-pink-600",
+      link: "#",
     },
-    // {
-    //   title: 'Fintech Mobile App',
-    //   description:
-    //     'Secure mobile banking application with real-time transactions, budgeting tools, and investment tracking.',
-    //   image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
-    //   tags: ['React Native', 'Node.js', 'Express', 'MongoDB'],
-    //   color: 'from-emerald-600 to-blue-700',
-    //   link: '#',
-    // },
-    // {
-    //   title: 'Learning Management System',
-    //   description:
-    //     'Interactive LMS with course management, video streaming, assessments, and student progress tracking.',
-    //   image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop',
-    //   tags: ['Angular', 'Django', 'PostgreSQL', 'Redis'],
-    //   color: 'from-indigo-600 to-purple-600',
-    //   link: '#',
-    // },
-    // {
-    //   title: 'Social Media Analytics',
-    //   description:
-    //     'Advanced analytics platform for social media insights, sentiment analysis, and performance metrics.',
-    //   image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    //   tags: ['React', 'D3.js', 'Python', 'TensorFlow'],
-    //   color: 'from-pink-600 to-rose-600',
-    //   link: '#',
-    // },
   ];
 
   return (
@@ -114,6 +89,8 @@ const ProjectsPage = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-end p-4">
                       <a
                         href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 text-white font-semibold hover:text-emerald-400 transition-colors"
                       >
                         View Project

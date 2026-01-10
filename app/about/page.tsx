@@ -3,12 +3,11 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import {
+  HiHeart,
   HiLightningBolt,
   HiShieldCheck,
-  HiHeart,
   HiSparkles,
 } from 'react-icons/hi';
-import { FaLinkedinIn, FaTwitter, FaGithub } from 'react-icons/fa';
 
 const AboutPage = () => {
   const values = [
@@ -42,48 +41,48 @@ const AboutPage = () => {
     },
   ];
 
-  const team = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO & Founder',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#',
-      },
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CTO',
-      image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#',
-      },
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Lead Designer',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#',
-      },
-    },
-    {
-      name: 'David Kim',
-      role: 'Senior Developer',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#',
-      },
-    },
-  ];
+  // const team = [
+  //   {
+  //     name: 'Sarah Johnson',
+  //     role: 'CEO & Founder',
+  //     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
+  //     social: {
+  //       linkedin: '#',
+  //       twitter: '#',
+  //       github: '#',
+  //     },
+  //   },
+  //   {
+  //     name: 'Michael Chen',
+  //     role: 'CTO',
+  //     image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop',
+  //     social: {
+  //       linkedin: '#',
+  //       twitter: '#',
+  //       github: '#',
+  //     },
+  //   },
+  //   {
+  //     name: 'Emily Rodriguez',
+  //     role: 'Lead Designer',
+  //     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
+  //     social: {
+  //       linkedin: '#',
+  //       twitter: '#',
+  //       github: '#',
+  //     },
+  //   },
+  //   {
+  //     name: 'David Kim',
+  //     role: 'Senior Developer',
+  //     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
+  //     social: {
+  //       linkedin: '#',
+  //       twitter: '#',
+  //       github: '#',
+  //     },
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen pt-20">
@@ -151,7 +150,7 @@ const AboutPage = () => {
             >
               <div className="aspect-square rounded-3xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop"
+                  src="/assets/team-work.jpg"
                   alt="Team collaboration"
                   fill
                   className="object-cover"

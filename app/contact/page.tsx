@@ -13,6 +13,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
+  FaWhatsapp,
 } from 'react-icons/fa';
 import { sendContact } from '../../src/lib/contact';
 
@@ -73,16 +74,9 @@ const ContactPage = () => {
     {
       icon: HiPhone,
       title: 'Call Us',
-      content: '+91 9737682010',
+      content: '+91 9737682010 / +91 9033353762',
       link: 'tel:+919737682010',
       color: 'from-emerald-600 to-blue-600',
-    },
-    {
-      icon: HiLocationMarker,
-      title: 'Visit Us',
-      content: 'Remote Worldwide',
-      link: '#',
-      color: 'from-blue-600 to-emerald-500',
     },
   ];
 
@@ -91,6 +85,7 @@ const ContactPage = () => {
     { icon: FaFacebookF, href: 'https://www.facebook.com/people/Craftic-Solutions/61581248604804/', label: 'Facebook', color: 'hover:bg-blue-600' },
     { icon: FaLinkedinIn, href: 'https://linkedin.com/in/craftic-solutions', label: 'LinkedIn', color: 'hover:bg-blue-700' },
     { icon: FaInstagram, href: 'https://www.instagram.com/crafticsolutions/', label: 'Instagram', color: 'hover:bg-pink-600' },
+    { icon: FaWhatsapp, href: 'https://wa.me/919033353762', label: 'WhatsApp', color: 'hover:bg-green-600' },
   ];
 
   return (
@@ -140,12 +135,41 @@ const ContactPage = () => {
                   <p className="text-slate-700 dark:text-slate-300 font-medium mb-1">
                     {info.content}
                   </p>
-                  {/* <p className="text-sm text-slate-400">
-                    {info.subContent}
-                  </p> */}
                 </div>
               </motion.a>
             ))}
+
+            {/* Social Media Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="bg-[#0f1419] rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 text-center h-full">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <HiChat className="text-white" size={28} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">
+                  Connect With Us
+                </h3>
+                <div className="flex gap-3 justify-center">
+                  {socialLinks.map((social, index) => (
+                    <motion.a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      className={`w-10 h-10 bg-[#1a1f2e] border border-white/5 rounded-full flex items-center justify-center ${social.color} hover:text-white transition-all duration-300`}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <social.icon size={18} />
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -406,29 +430,6 @@ const ContactPage = () => {
               </form>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Map Section (Placeholder) */}
-      <section className="py-20 bg-[#0a0e1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-[#1a1f2e] border border-white/5 rounded-3xl overflow-hidden h-96 flex items-center justify-center"
-          >
-            <div className="text-center">
-              <HiLocationMarker className="mx-auto mb-4 text-slate-400" size={64} />
-              <p className="text-slate-400 text-lg">
-                Map Integration Placeholder
-              </p>
-              <p className="text-slate-500 dark:text-slate-500 text-sm mt-2">
-                123 Tech Street, San Francisco, CA 94102
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>

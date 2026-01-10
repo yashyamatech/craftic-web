@@ -7,6 +7,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
+  FaWhatsapp,
 } from 'react-icons/fa';
 import { HiShieldCheck } from 'react-icons/hi2';
 
@@ -65,16 +66,9 @@ const ContactSection = () => {
     {
       icon: HiPhone,
       title: 'Call Us',
-      content: '+91 9737682010',
+      content: '+91 9737682010 / +91 9033353762',
       link: 'tel:+919737682010',
       color: 'from-emerald-600 to-blue-600',
-    },
-    {
-      icon: HiLocationMarker,
-      title: 'Visit Us',
-      content: 'Remote Worldwide',
-      link: '#',
-      color: 'from-blue-600 to-emerald-500',
     },
   ];
 
@@ -84,6 +78,7 @@ const ContactSection = () => {
       { icon: FaFacebookF, href: 'https://www.facebook.com/people/Craftic-Solutions/61581248604804/', label: 'Facebook', color: 'hover:bg-blue-600' },
       { icon: FaLinkedinIn, href: 'https://linkedin.com/in/craftic-solutions', label: 'LinkedIn', color: 'hover:bg-blue-700' },
       { icon: FaInstagram, href: 'https://www.instagram.com/crafticsolutions/', label: 'Instagram', color: 'hover:bg-pink-600' },
+      { icon: FaWhatsapp, href: 'https://wa.me/919033353762', label: 'WhatsApp', color: 'hover:bg-green-600' },
     ];
 
   return (

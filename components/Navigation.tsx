@@ -12,7 +12,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 0);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -29,11 +29,19 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'glass shadow-xl shadow-blue-900/10 backdrop-blur-2xl'
-          : 'bg-transparent'
+          ? 'backdrop-blur-2xl shadow-xl shadow-emerald-400/20 border-b border-emerald-400/30'
+          : 'backdrop-blur-md shadow-lg shadow-emerald-400/10 border-b border-emerald-400/20'
       }`}
+      style={{
+        background: scrolled
+          ? 'linear-gradient(to right, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.25), rgba(16, 185, 129, 0.15))'
+          : 'linear-gradient(to right, rgba(16, 185, 129, 0.08), rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.08))',
+        transform: 'translateZ(0)',
+        WebkitTransform: 'translateZ(0)',
+        willChange: 'transform'
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
@@ -44,13 +52,7 @@ const Navigation = () => {
             transition={{ duration: 0.5 }}
           >
             <Link href="/" className="flex items-center space-x-3">
-              {/* <div className="w-10 h-10 bg-transparent items-center justify-center shadow-lg "> */}
                 <Image src="/assets/logoblue.png" alt="Craftic logo" width={100} height={100} />
-                  
-              {/* </div> */}
-              {/* <span className="text-xl md:text-2xl font-bold gradient-text font-[Space_Grotesk]">
-                Craftic
-              </span> */}
             </Link>
           </motion.div>
 
@@ -104,7 +106,7 @@ const Navigation = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden glass border-t border-white/5 backdrop-blur-2xl"
+          className="md:hidden glass border-t  backdrop-blur-2xl"
         >
           <div className="px-4 py-4 space-y-3">
             {navItems.map((item) => (
