@@ -83,7 +83,7 @@ const ContactPage = () => {
 
   const socialLinks = [
     { icon: FaFacebookF, href: 'https://www.facebook.com/people/Craftic-Solutions/61581248604804/', label: 'Facebook', color: 'hover:bg-blue-600' },
-    { icon: FaLinkedinIn, href: 'https://linkedin.com/in/craftic-solutions', label: 'LinkedIn', color: 'hover:bg-blue-700' },
+    { icon: FaLinkedinIn, href: 'https://www.linkedin.com/company/craftic-solutions', label: 'LinkedIn', color: 'hover:bg-blue-700' },
     { icon: FaInstagram, href: 'https://www.instagram.com/crafticsolutions/', label: 'Instagram', color: 'hover:bg-pink-600' },
     { icon: FaWhatsapp, href: 'https://wa.me/919033353762', label: 'WhatsApp', color: 'hover:bg-green-600' },
   ];

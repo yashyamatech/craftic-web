@@ -20,7 +20,7 @@ const Footer = () => {
     },
     {
       icon: FaLinkedinIn,
-      href: "https://linkedin.com/in/craftic-solutions",
+      href: "https://www.linkedin.com/company/craftic-solutions",
       label: "LinkedIn",
     },
     {
